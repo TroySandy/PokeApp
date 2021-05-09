@@ -1,28 +1,42 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  margin-right: 50px;
 }
 
-.start{
-  margin-top: 50px;
+.start {
+  margin-top: 10px;
   align-self: center;
   width: 300px;
   height: 100px;
-  font-size: 1.7em;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  font-family: "Press Start 2P", cursive;
   color: white;
   font-weight: bold;
   background-color: red;
   border-color: white;
   border-radius: 10px;
 }
-
-.timer{ 
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3em;
+.answers {
+  margin-bottom: 25px;
+  align-self: center;
+  width: 200px;
+  height: 75px;
+  font-size: 1em;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(255, 0, 0);
+  border-color: white;
+  border-radius: 10px;
 }
 
-.pokeWrap{
+.timer {
+  font-family: "Press Start 2P", cursive;
+  margin-right: 10%;
+}
+
+.pokeWrap {
   align-self: flex-start;
   margin-top: -100px;
   margin-left: 18vw;
@@ -30,11 +44,88 @@
 
 .pokeImg {
   width: 500px;
+  border-radius: 50% 50%;
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+}
+@keyframes fadeIn {
+  0% {
+    filter: contrast(0);
+  }
+  90% {
+    filter: contrast(0.1);
+  }
+  100% {
+    filter: contrast(1);
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    filter: contrast(0);
+  }
+  90% {
+    filter: contrast(0.1);
+  }
+  100% {
+    filter: contrast(1);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    filter: contrast(0);
+  }
+  90% {
+    filter: contrast(0.1);
+  }
+  100% {
+    filter: contrast(1);
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    filter: contrast(0);
+  }
+  90% {
+    filter: contrast(0.1);
+  }
+  100% {
+    filter: contrast(1);
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    filter: contrast(0);
+  }
+  90% {
+    filter: contrast(0.1);
+  }
+  100% {
+    filter: contrast(1);
+  }
 }
 
 .pokeName {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   text-transform: uppercase;
-  margin-top: -50px;
+  margin-top: -75px;
+  animation: 1s textIn;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 
+@keyframes textIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
