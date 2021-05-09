@@ -13,6 +13,9 @@ class PokeFetch extends Component {
   }
 
   fetchPokemon = () => {
+    this.setState({
+      pokeSprite: ""
+    })
     let min = Math.ceil(1);
     let max = Math.floor(500);
     let pokeNum = Math.floor(Math.random() * (max - min) + min);
@@ -53,19 +56,22 @@ class Timer extends Component {
   }
 
   startTimer = () => {
+    this.setState({ seconds: 10 })
     this.timer = setInterval(this.countDown, 1000);
     this.props.pokeFetch();
+    console.log(this.state.seconds);
   };
 
   countDown = () => {
     const { seconds } = this.state;
     let c_seconds = seconds;
-
+    console.log(this.state.seconds);
     if (c_seconds) {
       // seconds change
       seconds
         ? this.setState({ seconds: seconds - 1 })
         : this.setState({ seconds: 10 });
+        console.log(this.state.seconds);
     } else {
       clearInterval(this.timer);
     }
