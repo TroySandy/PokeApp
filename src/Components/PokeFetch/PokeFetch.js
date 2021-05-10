@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PokeFetch.css";
 // import CountDownTimer from '../Timer/Timer'
 
-class PokeFetch extends Component {
+export default class PokeFetch extends Component {
   constructor() {
     super();
     this.state = {
@@ -43,8 +43,6 @@ class PokeFetch extends Component {
     );
   }
 }
-
-export default PokeFetch;
 
 class Timer extends Component {
   constructor(props) {
